@@ -20,6 +20,7 @@ Contact.prototype.fullName = function() {
 }
 
 $(document).ready(function() {
+  debugger;
   $("#add-insurance").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
       '<div class="form-group">' +
@@ -42,9 +43,7 @@ $(document).ready(function() {
   var inputtedPolicyNumber = $("input#new-policy-number").val();
   var inputtedAgentPhone = $("input#new-phone-number").val();
 
-
   $("form#new-contact").submit(function(event) {
-    event.preventDefault();
 
     var inputtedCabNumber = $("input#new-cab-number").val();
     var inputtedFirstName = $("input#new-first-name").val();
@@ -64,5 +63,8 @@ $(document).ready(function() {
     $("input#new-cab-number").val("");
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
+
+    event.preventDefault();
+
   });
 });
