@@ -11,8 +11,11 @@ function insuranceInfo(companyName, policyNumber, companyNumber) {
   this.companyNumber = companyNumber;
 }
 
+insuranceInfo.prototype.fullInsuranceInfo = function() {
+  return "Insurer: " + this.companyName + ", " + "Policy Number: " + this.policyNumber + ", " + "Phone Number: " + this.companyNumber;
+}
 
-Contact.prototype.fullName = function () {
+Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
